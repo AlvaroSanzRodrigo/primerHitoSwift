@@ -9,9 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
+    @IBOutlet weak var loginUserTxtField: UITextField!
+    
+    @IBOutlet weak var loginPsswTxtField: UITextField!
+    
+    @IBOutlet weak var debugggingggtext: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +28,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func loginButton(_ sender: Any) {
+          debugggingggtext.text = "pollas"
+    }
+    
 }
+
 
