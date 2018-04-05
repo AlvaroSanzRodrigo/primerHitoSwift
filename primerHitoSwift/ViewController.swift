@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnOk(_ sender: UIButton) {
         print("Esto funciona")
-        if loginUserTxtField?.text == "SanzCopacabana" && loginPsswTxtField?.text == "jahbless23"{
+        if loginUserTxtField?.text == "Sanz" && loginPsswTxtField?.text == "12345"{
             self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
         }
         
