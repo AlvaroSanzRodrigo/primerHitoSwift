@@ -30,12 +30,7 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
         return miCelda1
     }
-    
-    
 
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

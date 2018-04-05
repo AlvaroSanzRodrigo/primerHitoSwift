@@ -11,6 +11,7 @@ import UIKit
 class TVCMiCelda1: UITableViewCell {
 
     @IBOutlet weak var miLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
