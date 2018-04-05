@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1D7D33207603D800782011 /* VCItem1Table.swift */; };
 		AA6F616320737DF20056621C /* VCRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F616220737DF20056621C /* VCRegistrar.swift */; };
+		AA6F616620738C210056621C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F616520738C210056621C /* MapKit.framework */; };
+		AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */; };
 		AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF92B3520641CEB00B3863F /* AppDelegate.swift */; };
 		AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF92B3720641CEB00B3863F /* ViewController.swift */; };
 		AAF92B3B20641CEB00B3863F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF92B3920641CEB00B3863F /* Main.storyboard */; };
 		AAF92B3D20641CEB00B3863F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF92B3C20641CEB00B3863F /* Assets.xcassets */; };
 		AAF92B4020641CEB00B3863F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF92B3E20641CEB00B3863F /* LaunchScreen.storyboard */; };
+		BBCAA1BA8A4497C095A06A93 /* Pods_primerHitoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152315622E325C2B5D69371B /* Pods_primerHitoSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		152315622E325C2B5D69371B /* Pods_primerHitoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_primerHitoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		576B8EF117DE8ED24246E661 /* Pods-primerHitoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-primerHitoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		AA1D7D33207603D800782011 /* VCItem1Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCItem1Table.swift; sourceTree = "<group>"; };
 		AA6F616220737DF20056621C /* VCRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegistrar.swift; sourceTree = "<group>"; };
+		AA6F616520738C210056621C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
 		AAF92B3220641CEB00B3863F /* primerHitoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = primerHitoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF92B3520641CEB00B3863F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF92B3720641CEB00B3863F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		AAF92B3C20641CEB00B3863F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF92B3F20641CEB00B3863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF92B4120641CEB00B3863F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C199756CF4A1D3F1AE40AF2D /* Pods-primerHitoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-primerHitoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6F616620738C210056621C /* MapKit.framework in Frameworks */,
+				BBCAA1BA8A4497C095A06A93 /* Pods_primerHitoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EDE287A2B780E58D5466990 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				576B8EF117DE8ED24246E661 /* Pods-primerHitoSwift.debug.xcconfig */,
+				C199756CF4A1D3F1AE40AF2D /* Pods-primerHitoSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA6F616420738C210056621C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA6F616520738C210056621C /* MapKit.framework */,
+				152315622E325C2B5D69371B /* Pods_primerHitoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAF92B2920641CEB00B3863F = {
 			isa = PBXGroup;
 			children = (
 				AAF92B3420641CEB00B3863F /* primerHitoSwift */,
 				AAF92B3320641CEB00B3863F /* Products */,
+				AA6F616420738C210056621C /* Frameworks */,
+				3EDE287A2B780E58D5466990 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +91,12 @@
 				AAF92B3520641CEB00B3863F /* AppDelegate.swift */,
 				AAF92B3720641CEB00B3863F /* ViewController.swift */,
 				AAF92B3920641CEB00B3863F /* Main.storyboard */,
+				AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */,
 				AAF92B3C20641CEB00B3863F /* Assets.xcassets */,
 				AAF92B3E20641CEB00B3863F /* LaunchScreen.storyboard */,
 				AAF92B4120641CEB00B3863F /* Info.plist */,
 				AA6F616220737DF20056621C /* VCRegistrar.swift */,
+				AA1D7D33207603D800782011 /* VCItem1Table.swift */,
 			);
 			path = primerHitoSwift;
 			sourceTree = "<group>";
@@ -74,9 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAF92B4420641CEB00B3863F /* Build configuration list for PBXNativeTarget "primerHitoSwift" */;
 			buildPhases = (
+				3DC5B419B3452B6EB57694EC /* [CP] Check Pods Manifest.lock */,
 				AAF92B2E20641CEB00B3863F /* Sources */,
 				AAF92B2F20641CEB00B3863F /* Frameworks */,
 				AAF92B3020641CEB00B3863F /* Resources */,
+				6A2332A6E2A8493AAA7F8421 /* [CP] Embed Pods Frameworks */,
+				712E013E2F28F79261BF8837 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +137,11 @@
 					AAF92B3120641CEB00B3863F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -134,6 +176,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DC5B419B3452B6EB57694EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-primerHitoSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A2332A6E2A8493AAA7F8421 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		712E013E2F28F79261BF8837 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAF92B2E20641CEB00B3863F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +239,8 @@
 			files = (
 				AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */,
 				AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */,
+				AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */,
+				AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */,
 				AA6F616320737DF20056621C /* VCRegistrar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +376,7 @@
 		};
 		AAF92B4520641CEB00B3863F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 576B8EF117DE8ED24246E661 /* Pods-primerHitoSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +392,7 @@
 		};
 		AAF92B4620641CEB00B3863F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C199756CF4A1D3F1AE40AF2D /* Pods-primerHitoSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
