@@ -39,6 +39,8 @@ class VCRegister: UIViewController {
                 
                 if error == nil{
                     
+                    DataHolder.sharedInstance.actualUser = user
+                    
                     self.performSegue(withIdentifier: "trRegisterOk", sender: self)
                     
                 }

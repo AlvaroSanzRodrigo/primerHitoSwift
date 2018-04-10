@@ -15,6 +15,8 @@ class DataHolder: NSObject {
     
     var sNick:String = "Sanz"
     
+    var actualUser:User?
+    
     func initFireBase() {
         FirebaseApp.configure()
     }

@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         print("Esto funciona")
         Auth.auth().signIn(withEmail: (loginUserTxtField?.text)!, password: (loginPsswTxtField?.text)!) { (user, error) in
             if user != nil {
+                DataHolder.sharedInstance.actualUser = user
                 self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
             } else{
                 print(error!)
