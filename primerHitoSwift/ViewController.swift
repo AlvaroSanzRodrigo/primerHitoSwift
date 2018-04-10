@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -29,9 +30,12 @@ class ViewController: UIViewController {
     
     @IBAction func btnOk(_ sender: UIButton) {
         print("Esto funciona")
-        if loginUserTxtField?.text == "Sanz" && loginPsswTxtField?.text == "12345"{
-            self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
+        Auth.auth().signIn(withEmail: (loginUserTxtField?.text)!, password: (loginPsswTxtField?.text)!) { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
+            } else{
+                print(error!)
+            }
         }
-        
     }
 }

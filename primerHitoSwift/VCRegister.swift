@@ -43,7 +43,7 @@ class VCRegister: UIViewController {
                     
                 }
                 else {
-                    print("Error!")
+                    print("Error! ", error!)
                 }
             }
         
