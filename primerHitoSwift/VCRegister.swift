@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class VCRegister: UIViewController {
 
@@ -31,10 +32,22 @@ class VCRegister: UIViewController {
     
     @IBOutlet weak var btnOk: UIButton!
     @IBAction func btnGo(){
-        print("hola")
-        if !((txtFieldEmail?.text?.isEmpty)! && (txtFieldPssw?.text?.isEmpty)! && (txtFieldUser?.text?.isEmpty)! && (txtFieldPsswAgn?.text?.isEmpty)!) && (txtFieldPsswAgn?.text! == txtFieldPssw?.text!) {
-            self.performSegue(withIdentifier: "trRegisterOk", sender: self)
-        }
+        print(DataHolder.sharedInstance.sNick
+        )
+        
+            Auth.auth().createUser(withEmail: (txtFieldEmail?.text)!, password: (txtFieldPssw?.text)!) { (user, error) in
+                
+                if error == nil{
+                    
+                    self.performSegue(withIdentifier: "trRegisterOk", sender: self)
+                    
+                }
+                else {
+                    print("Error!")
+                }
+            }
+        
+        
                
     }
     

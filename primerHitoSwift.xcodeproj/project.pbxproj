@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0C8CFA207C9CEB003A992E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */; };
 		AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1D7D33207603D800782011 /* VCItem1Table.swift */; };
 		AA6F616620738C210056621C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F616520738C210056621C /* MapKit.framework */; };
 		AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */; };
+		AADEB0C9207CAEAB008AB6A2 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */; };
 		AAF9049520768229000EC619 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9049420768229000EC619 /* VCRegister.swift */; };
 		AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF92B3520641CEB00B3863F /* AppDelegate.swift */; };
 		AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF92B3720641CEB00B3863F /* ViewController.swift */; };
@@ -22,9 +24,11 @@
 /* Begin PBXFileReference section */
 		152315622E325C2B5D69371B /* Pods_primerHitoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_primerHitoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		576B8EF117DE8ED24246E661 /* Pods-primerHitoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-primerHitoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA1D7D33207603D800782011 /* VCItem1Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCItem1Table.swift; sourceTree = "<group>"; };
 		AA6F616520738C210056621C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
+		AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		AAF9049420768229000EC619 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
 		AAF92B3220641CEB00B3863F /* primerHitoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = primerHitoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF92B3520641CEB00B3863F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		AAF92B3420641CEB00B3863F /* primerHitoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */,
 				AAF92B3520641CEB00B3863F /* AppDelegate.swift */,
 				AAF92B3720641CEB00B3863F /* ViewController.swift */,
 				AAF92B3920641CEB00B3863F /* Main.storyboard */,
@@ -97,6 +102,7 @@
 				AAF92B4120641CEB00B3863F /* Info.plist */,
 				AA1D7D33207603D800782011 /* VCItem1Table.swift */,
 				AAF9049420768229000EC619 /* VCRegister.swift */,
+				AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */,
 			);
 			path = primerHitoSwift;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAF92B4020641CEB00B3863F /* LaunchScreen.storyboard in Resources */,
+				AA0C8CFA207C9CEB003A992E /* GoogleService-Info.plist in Resources */,
 				AAF92B3D20641CEB00B3863F /* Assets.xcassets in Resources */,
 				AAF92B3B20641CEB00B3863F /* Main.storyboard in Resources */,
 			);
@@ -202,11 +209,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -238,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */,
+				AADEB0C9207CAEAB008AB6A2 /* DataHolder.swift in Sources */,
 				AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */,
 				AAF9049520768229000EC619 /* VCRegister.swift in Sources */,
 				AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */,
