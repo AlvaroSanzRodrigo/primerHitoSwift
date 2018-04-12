@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var miTabla: UITableView!
     
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return 4;
     }
     

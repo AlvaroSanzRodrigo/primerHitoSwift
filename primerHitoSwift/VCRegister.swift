@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class VCRegister: UIViewController {
 
@@ -40,6 +41,19 @@ class VCRegister: UIViewController {
                 if error == nil{
                     
                     DataHolder.sharedInstance.actualUser = user
+                    
+                    
+                    DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!).setData([
+                        "user": (self.txtFieldUser?.text)!,
+                        "edad": 23,
+                        "coche": "coches/" + "jSGzn9bKB1updWoHvINw"
+                    ]) { err in
+                        if let err = err {
+                            print("Error adding document: \(err)")
+                        } else {
+                            print("Document added with ID: \(String(describing: user?.uid))")
+                        }
+                    }
                     
                     self.performSegue(withIdentifier: "trRegisterOk", sender: self)
                     

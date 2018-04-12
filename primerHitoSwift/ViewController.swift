@@ -8,9 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ViewController: UIViewController {
     
+    let refCoches = DataHolder.sharedInstance.fireStoreDB?.collection("coches")
 
     @IBOutlet weak var loginUserTxtField: UITextField?
     
@@ -33,6 +35,16 @@ class ViewController: UIViewController {
         Auth.auth().signIn(withEmail: (loginUserTxtField?.text)!, password: (loginPsswTxtField?.text)!) { (user, error) in
             if user != nil {
                 DataHolder.sharedInstance.actualUser = user
+                let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!)
+                refPerfil?.getDocument(completion: { (document, errordoc) in
+                    if document != nil {
+                        print(document?.data()! as Any)
+                        DataHolder.sharedInstance.userData? = document!
+                        
+                    }else{
+                        print(error!)
+                    }
+                })
                 self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
             } else{
                 print(error!)
