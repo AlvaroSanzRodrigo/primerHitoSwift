@@ -11,35 +11,18 @@ import FirebaseFirestore
 
 class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    let refCoches = DataHolder.sharedInstance.fireStoreDB?.collection("coches")
+   
     
     @IBOutlet weak var miTabla: UITableView!
     
     
     
+   
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 4;
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
-        
-        if indexPath.row == 0{
-            miCelda1.miLabel?.text = "Hola"
-        } else if indexPath.row == 1 {
-            miCelda1.miLabel?.text = DataHolder.sharedInstance.miPerfil.sNombreUsuario
-        }else if indexPath.row == 2 {
-            miCelda1.miLabel?.text = "Yony"
-        }else if indexPath.row == 3 {
-            miCelda1.miLabel?.text = "Joaquin"
-        }
-        return miCelda1
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -49,15 +32,18 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return DataHolder.sharedInstance.arrayMarcas.count
     }
-    */
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
+        miCelda1.miLabel.text? = DataHolder.sharedInstance.arrayMarcas.popLast()!
+        print("<- antes - cuando haces esto? - despues ->")
+        return miCelda1
+    }
+    
 
 }
