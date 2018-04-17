@@ -21,6 +21,8 @@ class DataHolder: NSObject {
     
     var userData:DocumentSnapshot?
     
+    var miPerfil:Perfiles = Perfiles ()
+    
     func initFireBase() {
         
         FirebaseApp.configure()

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA0C8CFA207C9CEB003A992E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */; };
 		AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1D7D33207603D800782011 /* VCItem1Table.swift */; };
+		AA3BD0992085DD6400296FD2 /* Perfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BD0982085DD6400296FD2 /* Perfiles.swift */; };
 		AA6F616620738C210056621C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F616520738C210056621C /* MapKit.framework */; };
 		AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */; };
 		AADEB0C9207CAEAB008AB6A2 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */; };
@@ -26,6 +27,7 @@
 		576B8EF117DE8ED24246E661 /* Pods-primerHitoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-primerHitoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-primerHitoSwift/Pods-primerHitoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA1D7D33207603D800782011 /* VCItem1Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCItem1Table.swift; sourceTree = "<group>"; };
+		AA3BD0982085DD6400296FD2 /* Perfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfiles.swift; sourceTree = "<group>"; };
 		AA6F616520738C210056621C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
 		AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				AA1D7D33207603D800782011 /* VCItem1Table.swift */,
 				AAF9049420768229000EC619 /* VCRegister.swift */,
 				AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */,
+				AA3BD0982085DD6400296FD2 /* Perfiles.swift */,
 			);
 			path = primerHitoSwift;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3BD0992085DD6400296FD2 /* Perfiles.swift in Sources */,
 				AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */,
 				AADEB0C9207CAEAB008AB6A2 /* DataHolder.swift in Sources */,
 				AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */,

@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 class ViewController: UIViewController {
     
-    let refCoches = DataHolder.sharedInstance.fireStoreDB?.collection("coches")
+    
 
     @IBOutlet weak var loginUserTxtField: UITextField?
     

@@ -11,6 +11,8 @@ import FirebaseFirestore
 
 class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    let refCoches = DataHolder.sharedInstance.fireStoreDB?.collection("coches")
+    
     @IBOutlet weak var miTabla: UITableView!
     
     
@@ -25,7 +27,7 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
         let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
         
         if indexPath.row == 0{
-            miCelda1.miLabel?.text = "Sanz"
+            
         } else if indexPath.row == 1 {
             miCelda1.miLabel?.text = "Pablo"
         }else if indexPath.row == 2 {

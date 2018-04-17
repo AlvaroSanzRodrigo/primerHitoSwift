@@ -161,12 +161,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQI-gK-Wsw">
+                                <rect key="frame" x="72" y="267" width="287" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3cO-gH-Opi"/>
                     </view>
                     <connections>
                         <outlet property="btnOk" destination="pUC-0F-0Or" id="dUi-4U-ie9"/>
+                        <outlet property="lblErrorMsg" destination="eQI-gK-Wsw" id="aMh-kq-i2B"/>
                         <outlet property="txtFieldEmail" destination="rGY-Ms-DDb" id="1be-Q1-Xtv"/>
                         <outlet property="txtFieldPssw" destination="XiI-r0-lAw" id="8O0-Ad-O3j"/>
                         <outlet property="txtFieldPsswAgn" destination="BaK-QL-E4p" id="6JT-v0-D4c"/>

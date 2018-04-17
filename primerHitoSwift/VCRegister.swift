@@ -20,6 +20,7 @@ class VCRegister: UIViewController {
     
     @IBOutlet weak var txtFieldPsswAgn: UITextField!
     
+    @IBOutlet weak var lblErrorMsg: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +36,8 @@ class VCRegister: UIViewController {
     @IBAction func btnGo(){
         print(DataHolder.sharedInstance.sNick
         )
-        
+        if !(txtFieldUser.text?.isEmpty)! &&  !(txtFieldPssw.text?.isEmpty)! && !(txtFieldEmail.text?.isEmpty)! && !(txtFieldPsswAgn.text?.isEmpty)! && (txtFieldPsswAgn.text == txtFieldPssw.text){
+            
             Auth.auth().createUser(withEmail: (txtFieldEmail?.text)!, password: (txtFieldPssw?.text)!) { (user, error) in
                 
                 if error == nil{
@@ -62,6 +64,22 @@ class VCRegister: UIViewController {
                     print("Error! ", error!)
                 }
             }
+        } else {
+            if  (txtFieldUser.text?.isEmpty)! {
+                lblErrorMsg.text = "Campo de usuario vacio!"
+            } else if (txtFieldEmail.text?.isEmpty)!{
+                lblErrorMsg.text = "Campo de Email vacio!"
+            } else if (txtFieldPssw.text?.isEmpty)!{
+                lblErrorMsg.text = "Campo de contraseña vacio!"
+            } else if (txtFieldPsswAgn.text?.isEmpty)!{
+                lblErrorMsg.text = "Campo de repetir contraseña vacio!"
+            } else if (txtFieldPsswAgn.text != txtFieldPssw.text){
+                lblErrorMsg.text = "Las contraseñas no coinciden!"
+            }
+        }
+        
+        
+        
         
         
                
