@@ -16,4 +16,28 @@ class Perfiles: NSObject {
     
     var sCoche:String?
     
+    
+    func setMap(valores:[String:Any]){
+        iEdad = valores["edad"] as? Int
+        
+        sNombreUsuario = valores["user"] as? String
+        
+        sCoche = valores["coche"] as? String
+    }
+    
+    func getMap() -> [String:Any] {
+        
+        var mapTemp:[String:Any] = [:]
+        
+        mapTemp["edad"] = iEdad as Any
+        
+        mapTemp["user"] = sNombreUsuario as Any
+        
+        mapTemp["coche"] = sCoche as Any
+        
+        return mapTemp
+    }
+    
 }
+
+

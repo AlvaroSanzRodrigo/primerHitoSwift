@@ -34,18 +34,18 @@ class ViewController: UIViewController {
         print("Esto funciona")
         Auth.auth().signIn(withEmail: (loginUserTxtField?.text)!, password: (loginPsswTxtField?.text)!) { (user, error) in
             if user != nil {
-                DataHolder.sharedInstance.actualUser = user
                 let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!)
                 refPerfil?.getDocument(completion: { (document, errordoc) in
                     if document != nil {
-                        print(document?.data()! as Any)
-                        DataHolder.sharedInstance.userData? = document!
                         
+                        DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                        print(DataHolder.sharedInstance.miPerfil.sNombreUsuario!, DataHolder.sharedInstance.miPerfil.iEdad!, DataHolder.sharedInstance.miPerfil.sCoche! )
+                         self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
                     }else{
                         print(error!)
                     }
                 })
-                self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
+               
             } else{
                 print(error!)
             }

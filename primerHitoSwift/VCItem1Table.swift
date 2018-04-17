@@ -27,9 +27,9 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
         let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
         
         if indexPath.row == 0{
-            
+            miCelda1.miLabel?.text = "Hola"
         } else if indexPath.row == 1 {
-            miCelda1.miLabel?.text = "Pablo"
+            miCelda1.miLabel?.text = DataHolder.sharedInstance.miPerfil.sNombreUsuario
         }else if indexPath.row == 2 {
             miCelda1.miLabel?.text = "Yony"
         }else if indexPath.row == 3 {

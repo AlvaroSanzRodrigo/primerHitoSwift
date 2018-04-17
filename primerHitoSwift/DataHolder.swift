@@ -17,10 +17,6 @@ class DataHolder: NSObject {
     
     var sNick:String = "Sanz"
     
-    var actualUser:User?
-    
-    var userData:DocumentSnapshot?
-    
     var miPerfil:Perfiles = Perfiles ()
     
     func initFireBase() {
