@@ -10,7 +10,11 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class VCRegister: UIViewController {
+class VCRegister: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+    
+    
+    
+   
 
     @IBOutlet weak var txtFieldEmail: UITextField!
     
@@ -20,12 +24,70 @@ class VCRegister: UIViewController {
     
     @IBOutlet weak var txtFieldPsswAgn: UITextField!
     
-    @IBOutlet weak var lblErrorMsg: UILabel!
+
+    
+    var selectedCar:String!
+    
+    @IBOutlet weak var myPicker: UIPickerView!
+   
+    
+    
+    var pickerData: [String] = ["McLaren", "BMW"]
+       
+    
+    
+    let carComponent = 0
+  
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    //MARK: - Picker View Data Sources and Delegates
+    
+ 
+    
+    func pickerView(_
+        pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int
+        ) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_
+        pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int)
+    {
+        updateLabel()
+    }
+    
+    //MARK: - Instance Methods
+    func updateLabel(){
+        
+        let car = pickerData[myPicker.selectedRow(inComponent: carComponent)]
+        if car.contains("McLaren") {
+            selectedCar = "/coches/jSGzn9bKB1updWoHvINw"
+        } else if car.contains("BMW"){
+            selectedCar = "/coches/K0u5PFw34JmtcNxbvDXR"
+        }
+        print(selectedCar)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        myPicker.selectRow(0, inComponent:carComponent, animated: false)
+        updateLabel()
     }
+    
+    
+    @IBOutlet weak var lblErrorMsg: UILabel!
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,8 +105,7 @@ class VCRegister: UIViewController {
                     
                     DataHolder.sharedInstance.miPerfil.iEdad = 23
                     DataHolder.sharedInstance.miPerfil.sNombreUsuario = self.txtFieldUser?.text
-                    DataHolder.sharedInstance.miPerfil.sCoche = "coches/jSGzn9bKB1updWoHvINw"
-                    
+                    DataHolder.sharedInstance.miPerfil.sCoche = self.selectedCar
                     DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!).setData(DataHolder.sharedInstance.miPerfil.getMap()) { err in
                         if let err = err {
                             print("Error adding document: \(err)")
@@ -99,5 +160,7 @@ class VCRegister: UIViewController {
         
                
     }
+    
+   
     
 }
