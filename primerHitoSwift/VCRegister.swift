@@ -32,7 +32,7 @@ class VCRegister: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
    
     
     
-    var pickerData: [String] = ["McLaren", "BMW"]
+    var pickerData: [String] = ["McLaren P1", "BMW 318 IS", "Renault Clio"]
        
     
     
@@ -74,6 +74,8 @@ class VCRegister: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             selectedCar = "/coches/jSGzn9bKB1updWoHvINw"
         } else if car.contains("BMW"){
             selectedCar = "/coches/K0u5PFw34JmtcNxbvDXR"
+        } else if car.contains("Renault"){
+            selectedCar = "/coches/XcOIzv1JFe5NI6HYlOnk"
         }
         print(selectedCar)
     }

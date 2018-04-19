@@ -16,10 +16,6 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var miTabla: UITableView!
     
     
-    
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
