@@ -16,6 +16,7 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var miTabla: UITableView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,9 +38,19 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
         miCelda1.miLabel.text? = DataHolder.sharedInstance.arrayMarcas.popLast()!
+        let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.arrayFotos.popLast()!)
+        islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+                miCelda1.imgCoche.image = image
+            }
+        }
         print("<- antes - cuando haces esto? - despues ->")
         return miCelda1
     }
-    
 
 }

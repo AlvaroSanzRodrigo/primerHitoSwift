@@ -11,6 +11,8 @@ import UIKit
 class TVCMiCelda1: UITableViewCell {
 
     @IBOutlet weak var miLabel: UILabel!
+    @IBOutlet weak var imgCoche: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
