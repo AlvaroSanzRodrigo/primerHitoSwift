@@ -37,8 +37,8 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
-        miCelda1.miLabel.text? = DataHolder.sharedInstance.arrayMarcas.popLast()!
-        let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.arrayFotos.popLast()!)
+        miCelda1.miLabel.text? = DataHolder.sharedInstance.arrayMarcas[indexPath.row]
+        let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.arrayFotos[indexPath.row])
         islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
                 // Uh-oh, an error occurred!
@@ -49,7 +49,7 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
                 miCelda1.imgCoche.image = image
             }
         }
-        print("<- antes - cuando haces esto? - despues ->")
+        print(print(DataHolder.sharedInstance.arrayFotos))
         return miCelda1
     }
 
