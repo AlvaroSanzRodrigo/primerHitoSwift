@@ -27,6 +27,12 @@ class DataHolder: NSObject {
     
     var arrayFotos:[String] = []
     
+    var arrayModelos:[String] = []
+    
+    var arrayLatitud:[Double] = []
+    
+    var arrayLongitud:[Double] = []
+    
     func initFireBase() {
         
         FirebaseApp.configure()
@@ -45,6 +51,10 @@ class DataHolder: NSObject {
                     
                     self.arrayMarcas.append((document.get("Marca") as? String)!)
                     self.arrayFotos.append((document.get("Foto") as? String)!)
+                    self.arrayModelos.append((document.get("Modelo") as? String)!)
+                    self.arrayLatitud.append((document.get("Lat") as? Double)!)
+                    self.arrayLongitud.append((document.get("Lon") as? Double)!)
+
                     print(self.arrayMarcas)
                     print("\(document.documentID) => \(document.data())")
                     
