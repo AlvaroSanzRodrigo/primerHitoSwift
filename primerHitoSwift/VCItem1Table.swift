@@ -9,7 +9,13 @@
 import UIKit
 import FirebaseFirestore
 
-class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource, DataHolderDelegate{
+    func DHDdescargaCochesComplete(allnice: Bool) {
+        if allnice {
+            miTabla.reloadData()
+        }
+    }
+    
     
    
     
@@ -19,6 +25,7 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
 
         // Do any additional setup after loading the view.
@@ -34,9 +41,10 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
         return DataHolder.sharedInstance.arrayMarcas.count
     }
     
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
+        DataHolder.sharedInstance.descargarCoches(delegate: self)
         miCelda1.miLabel.text? = DataHolder.sharedInstance.arrayMarcas[indexPath.row]
         let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.arrayFotos[indexPath.row])
         islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
@@ -52,5 +60,4 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
         print(print(DataHolder.sharedInstance.arrayFotos))
         return miCelda1
     }
-
 }

@@ -11,6 +11,8 @@ import Firebase
 
 class DataHolder: NSObject {
     
+    
+    
     static let sharedInstance:DataHolder = DataHolder();
     
     var fireStoreDB:Firestore?
@@ -42,11 +44,16 @@ class DataHolder: NSObject {
         storage = Storage.storage()
         
         storageRef = storage?.reference()
-        
-        fireStoreDB?.collection("coches").getDocuments() { (querySnapshot, err) in
+    }
+    
+    func descargarCoches(delegate: DataHolderDelegate){
+            var allNice:Bool = false
+                fireStoreDB?.collection("coches").getDocuments() { (querySnapshot, err) in
             if let err = err {
+                delegate.DHDdescargaCochesComplete(allnice: true)
                 print("Error getting documents: \(err)")
             } else {
+                delegate.DHDdescargaCochesComplete(allnice: true)
                 for document in querySnapshot!.documents {
                     
                     self.arrayMarcas.append((document.get("Marca") as? String)!)
@@ -54,14 +61,17 @@ class DataHolder: NSObject {
                     self.arrayModelos.append((document.get("Modelo") as? String)!)
                     self.arrayLatitud.append((document.get("Lat") as? Double)!)
                     self.arrayLongitud.append((document.get("Lon") as? Double)!)
-
                     print(self.arrayMarcas)
                     print("\(document.documentID) => \(document.data())")
                     
                 }
+                
             }
+            
         }
-        
     }
-    
+}
+
+@objc protocol DataHolderDelegate{
+    @objc func DHDdescargaCochesComplete(allnice: Bool)
 }
