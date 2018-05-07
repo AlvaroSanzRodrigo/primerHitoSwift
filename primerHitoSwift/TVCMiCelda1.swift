@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class TVCMiCelda1: UITableViewCell {
 
@@ -23,6 +24,20 @@ class TVCMiCelda1: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func descargarFoto(url:String){
+        let islandRef = DataHolder.sharedInstance.storageRef?.child(url)
+        islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            self.imgCoche?.image = nil
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                let image = UIImage(data: data!)
+                self.imgCoche.image = image
+            }
+        }
     }
 
 }

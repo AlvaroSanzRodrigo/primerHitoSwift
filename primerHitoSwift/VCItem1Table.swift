@@ -12,22 +12,18 @@ import FirebaseFirestore
 class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource, DataHolderDelegate{
     func DHDdescargaCochesComplete(allnice: Bool) {
         if allnice {
-            miTabla.reloadData()
+            print("allnice: \(allnice)" )
+            self.miTabla.reloadData()
         }
     }
     
-    
-   
-    
+
     @IBOutlet weak var miTabla: UITableView!
-    
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataHolder.sharedInstance.descargarCoches(delegate: self)
         
-        
-
         // Do any additional setup after loading the view.
     }
 
@@ -37,27 +33,15 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return DataHolder.sharedInstance.arrayMarcas.count
+        print(DataHolder.sharedInstance.coches.count)
+        return DataHolder.sharedInstance.coches.count
     }
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let miCelda1 = tableView.dequeueReusableCell(withIdentifier: "miCelda1") as! TVCMiCelda1
-        DataHolder.sharedInstance.descargarCoches(delegate: self)
-        miCelda1.miLabel.text? = DataHolder.sharedInstance.arrayMarcas[indexPath.row]
-        let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.arrayFotos[indexPath.row])
-        islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                // Uh-oh, an error occurred!
-                print(error)
-            } else {
-                // Data for "images/island.jpg" is returned
-                let image = UIImage(data: data!)
-                miCelda1.imgCoche.image = image
-            }
-        }
-        print(print(DataHolder.sharedInstance.arrayFotos))
+        miCelda1.miLabel.text? = DataHolder.sharedInstance.coches[indexPath.row].modelo!
+        miCelda1.descargarFoto(url: DataHolder.sharedInstance.coches[indexPath.row].foto!)
         return miCelda1
     }
 }

@@ -25,6 +25,8 @@ class DataHolder: NSObject {
     
     var miPerfil:Perfiles = Perfiles ()
     
+    var coches:[Coches] = []
+    
     var arrayMarcas:[String] = []
     
     var arrayFotos:[String] = []
@@ -48,23 +50,23 @@ class DataHolder: NSObject {
     
     func descargarCoches(delegate: DataHolderDelegate){
             var allNice:Bool = false
-                fireStoreDB?.collection("coches").getDocuments() { (querySnapshot, err) in
+                self.fireStoreDB?.collection("coches").getDocuments() { (querySnapshot, err) in
             if let err = err {
-                delegate.DHDdescargaCochesComplete(allnice: true)
+                delegate.DHDdescargaCochesComplete(allnice: allNice)
                 print("Error getting documents: \(err)")
             } else {
-                delegate.DHDdescargaCochesComplete(allnice: true)
+                
                 for document in querySnapshot!.documents {
                     
-                    self.arrayMarcas.append((document.get("Marca") as? String)!)
-                    self.arrayFotos.append((document.get("Foto") as? String)!)
-                    self.arrayModelos.append((document.get("Modelo") as? String)!)
-                    self.arrayLatitud.append((document.get("Lat") as? Double)!)
-                    self.arrayLongitud.append((document.get("Lon") as? Double)!)
-                    print(self.arrayMarcas)
+                    let c = Coches ()
+                    c.setMap(valores: document.data())
+                    self.coches.append(c)
                     print("\(document.documentID) => \(document.data())")
+                    print(self.coches)
                     
                 }
+                allNice = true
+                delegate.DHDdescargaCochesComplete(allnice: allNice)
                 
             }
             

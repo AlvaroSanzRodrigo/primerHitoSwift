@@ -10,9 +10,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class ViewController: UIViewController {
-    
-    
+class ViewController: UIViewController{
+   
 
     @IBOutlet weak var loginUserTxtField: UITextField?
     
@@ -40,7 +39,7 @@ class ViewController: UIViewController {
                         
                         DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
                         print(DataHolder.sharedInstance.miPerfil.sNombreUsuario!, DataHolder.sharedInstance.miPerfil.iEdad!, DataHolder.sharedInstance.miPerfil.sCoche! )
-                         self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
+                                                 self.performSegue(withIdentifier: "trLoginIsCorrect", sender: self)
                     }else{
                         print(error!)
                     }

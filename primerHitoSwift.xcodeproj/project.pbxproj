@@ -10,6 +10,7 @@
 		AA0C8CFA207C9CEB003A992E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */; };
 		AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1D7D33207603D800782011 /* VCItem1Table.swift */; };
 		AA3BD0992085DD6400296FD2 /* Perfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BD0982085DD6400296FD2 /* Perfiles.swift */; };
+		AA3D10F220A055FB00F12ED9 /* Coches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D10F120A055FB00F12ED9 /* Coches.swift */; };
 		AA6F616620738C210056621C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F616520738C210056621C /* MapKit.framework */; };
 		AA9F5D64208879C000E0B651 /* VCMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9F5D63208879C000E0B651 /* VCMapa.swift */; };
 		AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */; };
@@ -31,6 +32,7 @@
 		AA0C8CF9207C9CEB003A992E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA1D7D33207603D800782011 /* VCItem1Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCItem1Table.swift; sourceTree = "<group>"; };
 		AA3BD0982085DD6400296FD2 /* Perfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfiles.swift; sourceTree = "<group>"; };
+		AA3D10F120A055FB00F12ED9 /* Coches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coches.swift; sourceTree = "<group>"; };
 		AA6F616520738C210056621C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AA9F5D63208879C000E0B651 /* VCMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapa.swift; sourceTree = "<group>"; };
 		AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				AA9F5D63208879C000E0B651 /* VCMapa.swift */,
 				AABDFF50208F365500110830 /* VCCollection.swift */,
 				AABDFF52208F37F000110830 /* VCCCell1CollectionViewCell.swift */,
+				AA3D10F120A055FB00F12ED9 /* Coches.swift */,
 			);
 			path = primerHitoSwift;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */,
 				AABDFF53208F37F000110830 /* VCCCell1CollectionViewCell.swift in Sources */,
 				AADEB0C9207CAEAB008AB6A2 /* DataHolder.swift in Sources */,
+				AA3D10F220A055FB00F12ED9 /* Coches.swift in Sources */,
 				AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */,
 				AAF9049520768229000EC619 /* VCRegister.swift in Sources */,
 				AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */,
