@@ -10,6 +10,11 @@ import UIKit
 import FirebaseFirestore
 
 class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource, DataHolderDelegate{
+    func DHDregistro(allnice: Bool) {
+        
+        
+    }
+    
     func DHDdescargaCochesComplete(allnice: Bool) {
         if allnice {
             print("allnice: \(allnice)" )

@@ -11,14 +11,15 @@ import FirebaseStorage
 
 class VCCollection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DataHolder.sharedInstance.arrayModelos.count
+        print("hola")
+        return DataHolder.sharedInstance.coches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let miCuadrao = collectionView.dequeueReusableCell(withReuseIdentifier: "miCuadrao", for: indexPath) as! VCCCell1CollectionViewCell
-        miCuadrao.lblModelo.text? = DataHolder.sharedInstance.arrayModelos[indexPath.row]
-        miCuadrao.lblMarca.text? = DataHolder.sharedInstance.arrayMarcas[indexPath.row]
-        let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.arrayFotos[indexPath.row])
+        miCuadrao.lblModelo.text? = "hola"
+        miCuadrao.lblMarca.text? = DataHolder.sharedInstance.coches[indexPath.row].marca!
+        let islandRef = DataHolder.sharedInstance.storageRef?.child(DataHolder.sharedInstance.coches[indexPath.row].foto!)
         islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
                 // Uh-oh, an error occurred!
@@ -37,6 +38,7 @@ class VCCollection: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Do any additional setup after loading the view.
     }

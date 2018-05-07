@@ -72,8 +72,59 @@ class DataHolder: NSObject {
             
         }
     }
+    
+    func regitro(delegate:DataHolderDelegate, txtFieldEmail:String, txtFieldPssw:String, txtFieldUser:String, selectedCar:String) {
+        var allNice:Bool = false
+        
+        Auth.auth().createUser(withEmail: (txtFieldEmail), password: (txtFieldPssw)) { (user, error) in
+            
+            if error == nil{
+                
+                DataHolder.sharedInstance.miPerfil.iEdad = 23
+                DataHolder.sharedInstance.miPerfil.sNombreUsuario = txtFieldUser
+                DataHolder.sharedInstance.miPerfil.sCoche = selectedCar
+                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!).setData(DataHolder.sharedInstance.miPerfil.getMap()) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(String(describing: user?.uid))")
+                    }
+                }
+                
+                
+                if user != nil {
+                    
+                    allNice = true
+                    
+                    let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!)
+                    refPerfil?.getDocument(completion: { (document, errordoc) in
+                        if document != nil {
+                            
+                            DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                            print(DataHolder.sharedInstance.miPerfil.sNombreUsuario!, DataHolder.sharedInstance.miPerfil.iEdad!, DataHolder.sharedInstance.miPerfil.sCoche! )
+                            delegate.DHDregistro(allnice: allNice)
+                            
+                        }else{
+                            print(error!)
+                        }
+                    })
+                    
+                } else{
+                    print(error!)
+                }
+                
+                
+                
+                
+            }
+            else {
+                print("Error! ", error!)
+            }
+        }
+    }
 }
 
 @objc protocol DataHolderDelegate{
     @objc func DHDdescargaCochesComplete(allnice: Bool)
+    @objc func DHDregistro(allnice: Bool)
 }

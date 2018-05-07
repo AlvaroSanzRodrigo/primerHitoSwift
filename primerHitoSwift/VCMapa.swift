@@ -23,9 +23,9 @@ class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         locationManager?.requestAlwaysAuthorization()
         locationManager?.startUpdatingLocation()
         miMapa?.showsUserLocation = true
-        for modelo in DataHolder.sharedInstance.arrayModelos {
+        for modelo in DataHolder.sharedInstance.coches {
             
-            agregarPin(titulo: modelo, latitud: DataHolder.sharedInstance.arrayLatitud.popLast()!, longitud: DataHolder.sharedInstance.arrayLongitud.popLast()!)
+            agregarPin(titulo: modelo.modelo!, latitud: modelo.latitud!, longitud: modelo.longitud!)
         }
         
         // Do any additional setup after loading the view.
