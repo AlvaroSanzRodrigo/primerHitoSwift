@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import MapKit
 
-class DataHolder: NSObject {
+class DataHolder: NSObject{
     
     
     
@@ -27,15 +28,7 @@ class DataHolder: NSObject {
     
     var coches:[Coches] = []
     
-    var arrayMarcas:[String] = []
-    
-    var arrayFotos:[String] = []
-    
-    var arrayModelos:[String] = []
-    
-    var arrayLatitud:[Double] = []
-    
-    var arrayLongitud:[Double] = []
+    var arrayFotos:[String:UIImage] = [:]
     
     func initFireBase() {
         
@@ -122,9 +115,19 @@ class DataHolder: NSObject {
             }
         }
     }
+    
+    func agregarPin(delegate:DataHolderDelegate ,titulo title:String, latitud lat:Double, longitud lon:Double) {
+        let annotation:MKPointAnnotation = MKPointAnnotation()
+        annotation.title = title
+        annotation.coordinate.latitude = lat
+        annotation.coordinate.longitude = lon
+        delegate.DHDagregarPin(annotation: annotation)
+        
+    }
 }
 
 @objc protocol DataHolderDelegate{
     @objc func DHDdescargaCochesComplete(allnice: Bool)
     @objc func DHDregistro(allnice: Bool)
+    @objc func DHDagregarPin(annotation:MKPointAnnotation)
 }

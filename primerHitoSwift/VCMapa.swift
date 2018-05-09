@@ -10,7 +10,28 @@ import UIKit
 
 import MapKit
 import CoreLocation
-class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, DataHolderDelegate{
+    func DHDagregarPin(annotation: MKPointAnnotation) {
+        miMapa?.addAnnotation(annotation)
+    }
+    
+    func DHDdescargaCochesComplete(allnice: Bool) {
+        if allnice{
+            for modelo in DataHolder.sharedInstance.coches {
+                
+                DataHolder.sharedInstance.agregarPin(delegate: self, titulo: modelo.modelo!, latitud: modelo.latitud!, longitud: modelo.longitud!)
+            }
+        }
+        
+    }
+    
+    func DHDregistro(allnice: Bool) {
+        
+        
+    }
+    
+    
+    
 
     @IBOutlet var miMapa:MKMapView?
     var locationManager:CLLocationManager?
@@ -18,6 +39,9 @@ class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        if DataHolder.sharedInstance.coches.isEmpty {
+            DataHolder.sharedInstance.descargarCoches(delegate: self)
+        }
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
@@ -25,7 +49,7 @@ class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         miMapa?.showsUserLocation = true
         for modelo in DataHolder.sharedInstance.coches {
             
-            agregarPin(titulo: modelo.modelo!, latitud: modelo.latitud!, longitud: modelo.longitud!)
+            DataHolder.sharedInstance.agregarPin(delegate: self, titulo: modelo.modelo!, latitud: modelo.latitud!, longitud: modelo.longitud!)
         }
         
         // Do any additional setup after loading the view.
@@ -44,12 +68,6 @@ class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
     }
     
-    func agregarPin(titulo title:String, latitud lat:Double, longitud lon:Double) {
-        let annotation:MKPointAnnotation = MKPointAnnotation()
-        annotation.title = title
-        annotation.coordinate.latitude = lat
-        annotation.coordinate.longitude = lon
-        miMapa?.addAnnotation(annotation)
-    }
+    
 
 }

@@ -9,8 +9,13 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import MapKit
 
 class VCRegister: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, DataHolderDelegate{
+    func DHDagregarPin(annotation: MKPointAnnotation) {
+        
+    }
+    
     func DHDdescargaCochesComplete(allnice: Bool) {
         
         

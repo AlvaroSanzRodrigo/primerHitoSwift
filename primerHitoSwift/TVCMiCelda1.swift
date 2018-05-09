@@ -27,17 +27,36 @@ class TVCMiCelda1: UITableViewCell {
     }
     
     func descargarFoto(url:String){
-        let islandRef = DataHolder.sharedInstance.storageRef?.child(url)
-        islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            self.imgCoche?.image = nil
-            if let error = error {
-                // Uh-oh, an error occurred!
-                print(error)
-            } else {
-                let image = UIImage(data: data!)
-                self.imgCoche.image = image
+        
+        let UIImg = DataHolder.sharedInstance.arrayFotos[url]
+        
+        if UIImg != nil {
+            
+            let image = UIImg
+            self.imgCoche.image = image
+            print("primer if")
+            
+        } else {
+            print("primer else")
+            let islandRef = DataHolder.sharedInstance.storageRef?.child(url)
+            islandRef?.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                self.imgCoche?.image = nil
+                if let error = error {
+                    print("segundo if")
+                    // Uh-oh, an error occurred!
+                    print(error)
+                } else {
+                    print("segundo else")
+                    let image = UIImage(data: data!)
+                    self.imgCoche.image = image
+                    
+                }
+                DataHolder.sharedInstance.arrayFotos[url] = self.imgCoche.image
             }
+            
         }
+        
+        
     }
 
 }

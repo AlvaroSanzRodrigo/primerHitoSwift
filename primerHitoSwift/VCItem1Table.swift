@@ -8,8 +8,14 @@
 
 import UIKit
 import FirebaseFirestore
+import MapKit
 
 class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource, DataHolderDelegate{
+    func DHDagregarPin(annotation: MKPointAnnotation) {
+        
+        
+    }
+    
     func DHDregistro(allnice: Bool) {
         
         
@@ -27,7 +33,10 @@ class VCItem1Table: UIViewController, UITableViewDelegate, UITableViewDataSource
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataHolder.sharedInstance.descargarCoches(delegate: self)
+        if DataHolder.sharedInstance.coches.isEmpty {
+            DataHolder.sharedInstance.descargarCoches(delegate: self)
+        }
+        
         
         // Do any additional setup after loading the view.
     }
