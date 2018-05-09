@@ -16,6 +16,7 @@
 		AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */; };
 		AABDFF51208F365500110830 /* VCCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDFF50208F365500110830 /* VCCollection.swift */; };
 		AABDFF53208F37F000110830 /* VCCCell1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDFF52208F37F000110830 /* VCCCell1CollectionViewCell.swift */; };
+		AAD3FA4820A2DB67005E4CCC /* VCPics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3FA4720A2DB67005E4CCC /* VCPics.swift */; };
 		AADEB0C9207CAEAB008AB6A2 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */; };
 		AAF9049520768229000EC619 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9049420768229000EC619 /* VCRegister.swift */; };
 		AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF92B3520641CEB00B3863F /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 		AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
 		AABDFF50208F365500110830 /* VCCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCollection.swift; sourceTree = "<group>"; };
 		AABDFF52208F37F000110830 /* VCCCell1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCCell1CollectionViewCell.swift; sourceTree = "<group>"; };
+		AAD3FA4720A2DB67005E4CCC /* VCPics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPics.swift; sourceTree = "<group>"; };
 		AADEB0C8207CAEAB008AB6A2 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		AAF9049420768229000EC619 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
 		AAF92B3220641CEB00B3863F /* primerHitoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = primerHitoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				AABDFF50208F365500110830 /* VCCollection.swift */,
 				AABDFF52208F37F000110830 /* VCCCell1CollectionViewCell.swift */,
 				AA3D10F120A055FB00F12ED9 /* Coches.swift */,
+				AAD3FA4720A2DB67005E4CCC /* VCPics.swift */,
 			);
 			path = primerHitoSwift;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				AA3D10F220A055FB00F12ED9 /* Coches.swift in Sources */,
 				AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */,
 				AAF9049520768229000EC619 /* VCRegister.swift in Sources */,
+				AAD3FA4820A2DB67005E4CCC /* VCPics.swift in Sources */,
 				AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */,
 				AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */,
 				AA9F5D64208879C000E0B651 /* VCMapa.swift in Sources */,

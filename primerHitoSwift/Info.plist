@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>¿Quieres permitir la camara?</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>¿Quieres permitir la camara?</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>¿Quieres permitir la camara?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>¿Quieres permitir la camara?</string>
 	<key>NSLocationUsageDescription</key>
 	<string>¿Quieres permitir la localizacion, primo?</string>
 	<key>NSLocationAlwaysUsageDescription</key>
