@@ -15,7 +15,6 @@ class VCCollection: UIViewController, UICollectionViewDelegate, UICollectionView
         if allnice {
             print("allnice: \(allnice)" )
             collectionCoches.reloadData()
-            
         }
         
     }

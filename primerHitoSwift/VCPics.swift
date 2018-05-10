@@ -10,15 +10,18 @@ import UIKit
 import Photos
 import FirebaseFirestore
 
+
 class VCPics: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var imagePicked: UIImageView!
     
+   
+    
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -44,6 +47,18 @@ class VCPics: UIViewController , UIImagePickerControllerDelegate, UINavigationCo
                 } else {
                     // Metadata contains file metadata such as size, content-type, and download URL.
                     let downloadURL = metadata!.downloadURL()
+                    let autoID:String = String(format: "img_%d.jpg",iTimeMillis )
+                    DataHolder.sharedInstance.fireStoreDB?.collection("fotos").document(autoID).setData([
+                        "path": strPath,
+                        "uploader": DataHolder.sharedInstance.miPerfil.sNombreUsuario!,
+                        "url": downloadURL?.absoluteString
+                    ]) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
                     print("Parece que ha ido bien ", downloadURL!)
                 }
             }
@@ -57,4 +72,3 @@ class VCPics: UIViewController , UIImagePickerControllerDelegate, UINavigationCo
     }
     
 }
-
