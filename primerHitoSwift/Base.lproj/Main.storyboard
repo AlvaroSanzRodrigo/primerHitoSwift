@@ -436,6 +436,7 @@
                         <segue destination="u8H-gU-EBo" kind="relationship" relationship="viewControllers" id="JfR-ml-tKQ"/>
                         <segue destination="gZ6-ZC-2Ml" kind="relationship" relationship="viewControllers" id="uLU-jj-jpm"/>
                         <segue destination="xbw-5h-Hr2" kind="relationship" relationship="viewControllers" id="UNC-Gx-R4W"/>
+                        <segue destination="yrc-ho-dTD" kind="relationship" relationship="viewControllers" id="xfs-S2-Gw8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuk-Uu-EWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -452,7 +453,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pxQ-FE-jPw">
                                 <rect key="frame" x="16" y="44" width="343" height="685"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rHP-u7-sot">
                                     <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -473,16 +474,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-wO-Q84">
                                                     <rect key="frame" x="-3" y="43" width="166" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr8-vr-RXs">
                                                     <rect key="frame" x="2" y="115" width="156" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="eZo-03-H2A"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -527,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKF-wf-jsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.79999999999995" y="1563.8680659670167"/>
+            <point key="canvasLocation" x="1004" y="1594"/>
         </scene>
         <!--Map-->
         <scene sceneID="Mey-eH-aTX">
@@ -573,6 +571,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ybm-K4-qvM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="miCelda1" rowHeight="92" id="MS2-2a-pFv" customClass="TVCMiCelda1" customModule="primerHitoSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
@@ -584,7 +583,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40e-hH-vkC">
                                                     <rect key="frame" x="74" y="14" width="270" height="33"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SanzCorpLogo" translatesAutoresizingMaskIntoConstraints="NO" id="IPE-IX-A4J">
@@ -604,6 +603,7 @@
                                                 <constraint firstItem="IPE-IX-A4J" firstAttribute="centerY" secondItem="40e-hH-vkC" secondAttribute="centerY" id="vpq-uI-hy9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="imgCoche" destination="IPE-IX-A4J" id="TLa-fN-17k"/>
                                             <outlet property="miLabel" destination="40e-hH-vkC" id="mW9-qW-f1b"/>
@@ -675,6 +675,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9C6-9j-hAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3668" y="939.58020989505258"/>
+        </scene>
+        <!--Coleccion-->
+        <scene sceneID="Ou2-or-xd1">
+            <objects>
+                <viewController id="yrc-ho-dTD" userLabel="Coleccion" customClass="CVCuserPics" customModule="primerHitoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbu-d4-cBs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rST-pO-FvH">
+                                <rect key="frame" x="16" y="44" width="343" height="685"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i3J-UO-y7Q">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellUserPic" id="DEK-Is-4Md" customClass="CVCCellusuariofotos" customModule="primerHitoSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SanzCorpLogo" translatesAutoresizingMaskIntoConstraints="NO" id="h8V-Yk-h1Y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="h8V-Yk-h1Y" firstAttribute="leading" secondItem="DEK-Is-4Md" secondAttribute="leadingMargin" constant="24" id="GZM-bj-MLM"/>
+                                            <constraint firstItem="h8V-Yk-h1Y" firstAttribute="centerY" secondItem="DEK-Is-4Md" secondAttribute="centerY" id="h1h-dU-AQi"/>
+                                            <constraint firstItem="h8V-Yk-h1Y" firstAttribute="centerX" secondItem="DEK-Is-4Md" secondAttribute="centerX" id="nm0-mv-KWm"/>
+                                        </constraints>
+                                        <size key="customSize" width="160" height="160"/>
+                                        <connections>
+                                            <outlet property="imFotoUsuario" destination="h8V-Yk-h1Y" id="Jxz-p0-gPR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="yrc-ho-dTD" id="93c-eW-uc8"/>
+                                    <outlet property="delegate" destination="yrc-ho-dTD" id="ccc-ON-h1B"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rST-pO-FvH" firstAttribute="trailing" secondItem="vbu-d4-cBs" secondAttribute="trailingMargin" id="4KW-gz-wE9"/>
+                            <constraint firstItem="rST-pO-FvH" firstAttribute="top" secondItem="LgZ-TK-5rW" secondAttribute="top" id="Bb3-zi-CYA"/>
+                            <constraint firstItem="rST-pO-FvH" firstAttribute="bottom" secondItem="LgZ-TK-5rW" secondAttribute="bottom" id="HWt-oC-Uci"/>
+                            <constraint firstItem="rST-pO-FvH" firstAttribute="leading" secondItem="vbu-d4-cBs" secondAttribute="leadingMargin" id="uQf-dE-9MN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LgZ-TK-5rW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="fotos user" id="A5q-VY-6K3" userLabel="Coleccion"/>
+                    <connections>
+                        <outlet property="variableGenial" destination="rST-pO-FvH" id="4UY-by-Xdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TM-wH-xYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3568.8000000000002" y="15.517241379310345"/>
         </scene>
     </scenes>
     <resources>

@@ -28,7 +28,11 @@ class DataHolder: NSObject{
     
     var coches:[Coches] = []
     
+    var datosFotosUsuarios:[fotosUsuarios] = []
+    
     var arrayFotos:[String:UIImage] = [:]
+    
+    var arrayFotosUsuarios:[String:UIImage] = [:]
     
     func initFireBase() {
         

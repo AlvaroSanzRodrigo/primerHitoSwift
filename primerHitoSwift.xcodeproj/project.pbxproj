@@ -12,6 +12,9 @@
 		AA3BD0992085DD6400296FD2 /* Perfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BD0982085DD6400296FD2 /* Perfiles.swift */; };
 		AA3D10F220A055FB00F12ED9 /* Coches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D10F120A055FB00F12ED9 /* Coches.swift */; };
 		AA6F616620738C210056621C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F616520738C210056621C /* MapKit.framework */; };
+		AA7E9BF520B4047F00ED1538 /* CVCCellusuariofotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BF420B4047F00ED1538 /* CVCCellusuariofotos.swift */; };
+		AA7E9BF720B40E5300ED1538 /* CVCuserPics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BF620B40E5300ED1538 /* CVCuserPics.swift */; };
+		AA7E9BF920B419F600ED1538 /* fotosUsuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BF820B419F600ED1538 /* fotosUsuarios.swift */; };
 		AA9F5D64208879C000E0B651 /* VCMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9F5D63208879C000E0B651 /* VCMapa.swift */; };
 		AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */; };
 		AABDFF51208F365500110830 /* VCCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDFF50208F365500110830 /* VCCollection.swift */; };
@@ -35,6 +38,9 @@
 		AA3BD0982085DD6400296FD2 /* Perfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfiles.swift; sourceTree = "<group>"; };
 		AA3D10F120A055FB00F12ED9 /* Coches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coches.swift; sourceTree = "<group>"; };
 		AA6F616520738C210056621C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AA7E9BF420B4047F00ED1538 /* CVCCellusuariofotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCCellusuariofotos.swift; sourceTree = "<group>"; };
+		AA7E9BF620B40E5300ED1538 /* CVCuserPics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCuserPics.swift; sourceTree = "<group>"; };
+		AA7E9BF820B419F600ED1538 /* fotosUsuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fotosUsuarios.swift; sourceTree = "<group>"; };
 		AA9F5D63208879C000E0B651 /* VCMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapa.swift; sourceTree = "<group>"; };
 		AAB1CCAB2076110200268F24 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
 		AABDFF50208F365500110830 /* VCCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCollection.swift; sourceTree = "<group>"; };
@@ -121,6 +127,9 @@
 				AABDFF52208F37F000110830 /* VCCCell1CollectionViewCell.swift */,
 				AA3D10F120A055FB00F12ED9 /* Coches.swift */,
 				AAD3FA4720A2DB67005E4CCC /* VCPics.swift */,
+				AA7E9BF420B4047F00ED1538 /* CVCCellusuariofotos.swift */,
+				AA7E9BF620B40E5300ED1538 /* CVCuserPics.swift */,
+				AA7E9BF820B419F600ED1538 /* fotosUsuarios.swift */,
 			);
 			path = primerHitoSwift;
 			sourceTree = "<group>";
@@ -278,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7E9BF720B40E5300ED1538 /* CVCuserPics.swift in Sources */,
+				AA7E9BF920B419F600ED1538 /* fotosUsuarios.swift in Sources */,
 				AA3BD0992085DD6400296FD2 /* Perfiles.swift in Sources */,
 				AAF92B3820641CEB00B3863F /* ViewController.swift in Sources */,
 				AABDFF53208F37F000110830 /* VCCCell1CollectionViewCell.swift in Sources */,
@@ -285,6 +296,7 @@
 				AA3D10F220A055FB00F12ED9 /* Coches.swift in Sources */,
 				AAF92B3620641CEB00B3863F /* AppDelegate.swift in Sources */,
 				AAF9049520768229000EC619 /* VCRegister.swift in Sources */,
+				AA7E9BF520B4047F00ED1538 /* CVCCellusuariofotos.swift in Sources */,
 				AAD3FA4820A2DB67005E4CCC /* VCPics.swift in Sources */,
 				AAB1CCAC2076110200268F24 /* TVCMiCelda1.swift in Sources */,
 				AA1D7D34207603D800782011 /* VCItem1Table.swift in Sources */,
